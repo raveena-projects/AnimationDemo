@@ -3,5 +3,14 @@
     <rotate
         android:duration="5000"
         android:fromDegrees="0"
+        android:pivotX="50%"
+        android:pivotY="50%"
         android:toDegrees="360"/>
+    <rotate
+        android:duration="5000"
+        android:startOffset="5000"
+        android:fromDegrees="360"
+        android:pivotX="50%"
+        android:pivotY="50%"
+        android:toDegrees="0"/>
 </set>

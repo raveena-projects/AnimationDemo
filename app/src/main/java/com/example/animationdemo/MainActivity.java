@@ -16,7 +16,7 @@ import androidx.core.view.WindowInsetsCompat;
 public class MainActivity extends AppCompatActivity {
 
     private ImageView imageView;
-    private Button btn_Blink,btn_Move;
+    private Button btn_Blink,btn_Move,btn_Rotate,btn_Slide;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -37,6 +37,24 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View view) {
                 Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
                         R.anim.move_object_animation);
+                imageView.startAnimation(animation);
+            }
+        });
+        btn_Rotate = findViewById(R.id.btnRotateImage);
+        btn_Rotate.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.rotate_animation);
+                imageView.startAnimation(animation);
+            }
+        });
+        btn_Slide = findViewById(R.id.btnSlideImage);
+        btn_Slide.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Animation animation = AnimationUtils.loadAnimation(getApplicationContext(),
+                        R.anim.slide_animation);
                 imageView.startAnimation(animation);
             }
         });
